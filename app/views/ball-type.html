@@ -5,6 +5,8 @@
 {% endblock %}
 
 {% block content %}
+<main id="content" role="main">
+
 <a href="/juggling-trick" class="link-back">Back</a>
 <h1 class="heading-xlarge">What type of balls do you juggle with?</h1>
 <div class="form-group">
@@ -12,39 +14,40 @@
   Select all that apply
  </span>
 </div>
-<main id="content" role="main">
 <form class="form" action="/check-your-answers-page" method="post">
   <fieldset>
 
-    <div class="multiple-choice">
-      <input id="ball-type-1" name="ball-types" type="checkbox" value="Beanbags"{{checked("ball-types","Beanbags")}}>
-      <label for="ball-type-1">Beanbags</label>
-    </div>
-    <div class="multiple-choice">
-      <input id="ball-type-2" name="ball-types" type="checkbox" value="Stage balls"{{checked("ball-types","Stage balls")}}>
-      <label for="ball-type-2">Stage balls</label>
-    </div>
-    <div class="multiple-choice">
-      <input id="ball-type-3" name="ball-types" type="checkbox" value="Silicone balls"{{checked("ball-types","Silicone balls")}}>
-      <label for="ball-type-3">Silicone balls</label>
-    </div>
-    <div class="multiple-choice">
-      <input id="ball-type-4" name="ball-types" type="checkbox" value="Russian balls"{{checked("ball-types","Russian balls")}}>
-      <label for="ball-type-4">Russian balls</label>
-    </div>
+    <div class="form-group">
+      <div class="multiple-choice">
+        <input id="ball-type-1" name="ball-types" type="checkbox" value="Beanbags"{{checked("ball-types","Beanbags")}}>
+        <label for="ball-type-1">Beanbags</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="ball-type-2" name="ball-types" type="checkbox" value="Stage balls"{{checked("ball-types","Stage balls")}}>
+        <label for="ball-type-2">Stage balls</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="ball-type-3" name="ball-types" type="checkbox" value="Silicone balls"{{checked("ball-types","Silicone balls")}}>
+        <label for="ball-type-3">Silicone balls</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="ball-type-4" name="ball-types" type="checkbox" value="Russian balls"{{checked("ball-types","Russian balls")}}>
+        <label for="ball-type-4">Russian balls</label>
+      </div>
 
-    <div class="multiple-choice" data-target="other-checkbox">
-      <input id="ball-type-5" name="ball-types" type="checkbox" value="Other"{{checked("ball-types","other-input")}}>
-      <label for="ball-type-5">Other</label>
-    </div>
-    <div class="panel panel-border-narrow js-hidden" id="other-checkbox">
+      <div class="multiple-choice" data-target="other-checkbox">
+        <input id="ball-type-5" name="ball-types" type="checkbox" value="Other"{{checked("ball-types","other-input")}}>
+        <label for="ball-type-5">Other</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="other-checkbox">
         <label class="form-label" for="Other">What other ball types do you juggle with?</label>
         <input class="form-control" type="text" id="other-input" name="other-input">
       </div>
+    </div>
 
     <div class="form-group">
-    <input class="button" type="submit" value="Continue">
-  </div>
+      <input class="button" type="submit" value="Continue">
+    </div>
 
   </fieldset>
 </form>
